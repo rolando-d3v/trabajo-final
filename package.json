@@ -1,5 +1,5 @@
 {
-  "name": "trabajo-final",
+  "name": "trabajo-final-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,13 +14,17 @@
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^5.10.2",
+    "@types/multer": "^1.4.11",
     "cors": "^2.8.5",
+    "dayjs": "^1.11.10",
     "dotenv": "^16.4.5",
     "express": "^4.18.3",
     "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
     "mysql2": "^3.9.2",
     "pg": "^8.11.3",
     "prisma": "^5.10.2",
+    "short-uuid": "^4.2.2",
     "zod": "^3.22.4"
   },
   "devDependencies": {

@@ -1,8 +1,8 @@
 import express, { Request, RequestHandler, Response }  from "express";
 import cors from "cors";
 
-import { PrismaClient as PrismaClient1 } from '../prisma/generated/client1'
-import { PrismaClient as PrismaClient2 } from '../prisma/generated/client2'
+import { PrismaClient } from "@prisma/client";
+
 // import { PrismaClient as PrismaClient2 } from '@prisma/client'
 import{z} from "zod";
 
@@ -28,8 +28,8 @@ app.use(express.urlencoded({ extended: false }));
 
 
 
-const client1 = new PrismaClient1()
-const client2 = new PrismaClient2()
+const prisma = new PrismaClient()
+
 
 
 
@@ -52,7 +52,7 @@ app.get('/red', async  (req : Request, res: Response) => {
   console.log(Validated);
 
   // const pepe = await client2.
-  const pepe = await client1.documento.findMany({})
+  const pepe = await prisma.documento.findFirstOrThrow({})
   
 
 } )
